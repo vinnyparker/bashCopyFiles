@@ -6,8 +6,9 @@ SCRIPTS_DIR=CaminhoParaDiretorioQueContemArquivosSql
 DATABASE_NAME=NomedoBancoDeDados
 HOST=localhost
 
-createdb -h $HOST -U govnet $DATABASE_NAME;
+createdb -h $HOST -U postgres $DATABASE_NAME;
 
 for file in $SCRIPTS_DIR/*.sql
-    do sudo -u postgres psql -h 10.0.0.16 -U govnet -d $DATABASE_NAME -f $file
-done
+  do 
+    postgres psql -h $HOST -U postgres -d $DATABASE_NAME -f $file  
+  done
