@@ -4,7 +4,7 @@
 
 SCRIPTS_DIR=CaminhoParaDiretorioQueContemArquivosSql
 DATABASE_NAME=NomedoBancoDeDados
-HOST=/home/vinny/bkp
+HOST=localhost
 
 createdb -h $HOST -U govnet $DATABASE_NAME;
 
